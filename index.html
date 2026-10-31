@@ -3,91 +3,138 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>BORROW-BOX</title>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+      .nav-item-hover {
+        color: #212529 !important; 
+        font-weight: 600;
+        position: relative;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+      }
+      .nav-item-hover:hover, 
+      .nav-item-hover.active-tab {
+        color: #198754 !important;
+      }
+      .nav-item-hover::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -18px; 
+        height: 3px;
+        background-color: #115e3b;
+        transform: scaleX(0);
+        transition: transform 0.2s ease-in-out;
+        border-radius: 50px;
+      }
+      .nav-item-hover:hover::after, 
+      .nav-item-hover.active-tab::after {
+        transform: scaleX(1);
+      }
+    </style>
   </head>
   <body>
 
-    <!-- NAVBAR-->
-    <nav class="navbar navbar-expand-lg borrowbox-navbar">
-      <div class="container-fluid px-4">
-        <!--Brand section-->
-        <div class="brand-section">
-         <a class="navbar-brand d-flex align-items-center" href="#">
-          <div class="brand-logo">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                 width="29" height="29"
-                 fill="none" viewBox="0 0 24 24"
-                 stroke="white" stroke-width="1.8">
-
-              <path stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 3 21 18-9 5-9-5 5-9z"/>
-              <path stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M3 8v919 5 9-5V8"/>
-              <path stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 13v9"/>     
-                </svg>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+      <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
+        
+        <!-- 1. Brand Section -->
+        <a class="navbar-brand d-flex align-items-center text-decoration-none m-0" href="#">
+          <div class="rounded-4 p-2 me-3 d-flex align-items-center justify-content-center text-white" style="width: 48px; height: 48px; background-color: #115e3b;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
           </div>
-          
-          <div class="brand-text">
-            <span class="brand-name">BorrowBox</span>
-            <span class="brand-tagline">What You Need, When You Need</span>
+          <div class="brand-text d-flex flex-column">
+            <span class="fw-bold fs-4 lh-1 mb-1" style="color: #0b3c29; letter-spacing: -0.5px;">BorrowBox</span>
+            <span class="text-muted" style="font-size: 0.78rem;">What You Need, When You Need It.</span>
           </div>
-         </a>
-         <!--End of brand logo-->
+        </a>
 
+        <!-- Mobile Toggler Button -->
         <button class="navbar-toggler" type="button"
-          data-bs-toggler="collapse"
-          data-bs-target="#navbarSupportContent"
-          aria-controls="navbarSupportContent"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!--Navigation-->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
-            <li class="nav-item">
-              <a class="nav-link px-4 text-dark link-success link-underline-opacity-0 link-underline-opacity-100-hover fw-bold-hove" aria-current="page" href="#">🏠 HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-4 text-dark link-success link-underline-opacity-0 link-underline-opacity-100-hover fw-bold-hove" href="#">🪙 BORROWINGS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link px-4 text-dark link-success link-underline-opacity-0 link-underline-opacity-100-hover fw-bold-hove" href="#">📩 MESSAGES</a>
-            </li>
-            <!--drop downs-->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-                PROFILE
+
+        <!-- 2. Navigation Tabs-->
+        <div class="collapse navbar-collapse justify-content-center flex-grow-1" id="navbarSupportedContent">
+          <ul class="navbar-nav flex-row gap-5 align-items-center m-0">
+            <!-- Home Tab -->
+            <li class="nav-item position-relative">
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"></svg>
+                HOME
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">BORROWING</a></li>
-                <li><a class="dropdown-item" href="#">LENDING</a></li>
-                <li><hr class="dropdown-divider"></li>
-              </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="false"></a>
+
+            <!-- Browse Items Tab -->
+            <li class="nav-item position-relative">
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                Browse Items
+              </a>
+            </li>
+
+            <!-- My Borrowings Tab -->
+            <li class="nav-item position-relative">
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4m-5 4h18"/></svg>
+                My Borrowings
+              </a>
+            </li>
+
+            <!-- Messages Tab  -->
+            <li class="nav-item position-relative">
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2 position-relative" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Messages
+              </a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
+
+        <div class="d-flex align-items-center gap-4">
+          <!-- Notification Bell Icon -->
+          <button class="btn p-0 text-secondary position-relative border-0 bg-transparent" type="button" aria-label="Notifications">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+          </button>
+
+          <!-- Profile Dropdown (Borrowing / Lending) -->
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center gap-2 text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="rounded-circle text-white d-flex align-items-center justify-content-center fw-bold overflow-hidden" style="width: 42px; height: 42px; background-color: #072213;">
+                G
+              </div>
+              <div class="d-flex flex-column lh-sm">
+                <span class="fw-bold text-dark" style="font-size: 0.95rem;">GODI</span>
+                <span class="text-muted" style="font-size: 0.75rem;">Student</span>
+              </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3 mt-2">
+              <li><a class="dropdown-item py-2 fw-semibold" href="#">BORROWING</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="#">LENDING</a></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
-    
     </nav>
     <!-- End of the Nav bar section -->
-
-
-
 
   </body>
 </html>
