@@ -136,6 +136,118 @@
     </nav>
     <!-- End of the Nav bar section -->
 
+
+    <!--BEGIN MESSAGES-->
+        <!-- Main Container -->
+    <div class="container-fluid my-3">
+        <div class="row bg-white rounded shadow-sm overflow-hidden border">
+            
+            <!-- Left Sidebar: Conversations List -->
+            <div class="col-md-4 col-lg-3 p-0" style="height: calc(100vh - 100px); overflow-y: auto; border-right: 1px solid #dee2e6;">
+                <div class="p-3 border-bottom">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="Search chats or items...">
+                        <button class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+                
+                <div class="list-group list-group-flush">
+                    <!-- Active Conversation -->
+                    <div class="list-group-item list-group-item-action active p-3 border-bottom">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="mb-1 fw-bold"> Okelo Christopher </h6>
+                            <small class="text-muted">10:42 AM</small>
+                        </div>
+                        <p class="mb-1 text-muted small text-truncate">Hey, is the Graphing Calculator still available?</p>
+                        <span class="badge bg-success text-white">Item: TI-84 Calculator</span>
+                    </div>
+
+                    <!-- Other Conversations -->
+                    <div class="list-group-item list-group-item-action p-3 border-bottom">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="mb-1">Brad Pitt</h6>
+                            <small class="text-muted">Yesterday</small>
+                        </div>
+                        <p class="mb-1 text-muted small text-truncate">Thanks for returning the lab coat on time!</p>
+                        <span class="badge bg-secondary text-white">Item: Lab Coat</span>
+                    </div>
+
+                    <div class="list-group-item list-group-item-action p-3 border-bottom">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="mb-1">Don Toliver</h6>
+                            <small class="text-muted">Oct 24</small>
+                        </div>
+                        <p class="mb-1 text-muted small text-truncate">Can I borrow your DSLR camera this weekend?</p>
+                        <span class="badge bg-secondary text-white">Item: Canon EOS Rebel</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Window: Active Chat -->
+            <div class="col-md-8 col-lg-9 p-0 d-flex flex-column" style="height: calc(100vh - 100px);">
+                
+                <!-- Chat Header -->
+                <div class="p-3 border-bottom bg-white d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center me-3 fw-bold" style="width: 40px; height: 40px;">
+                            GJ
+                        </div>
+                        <div>
+                            <h5 class="mb-0 fs-6 fw-bold">Geno Joshua</h5>
+                            <small class="text-muted">About: <a href="#" class="text-decoration-none">TI-84 Graphing Calculator</a></small>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-outline-success"><i class="bi bi-check-circle me-1"></i>Mark as Borrowed</button>
+                    </div>
+                </div>
+
+                <!-- Chat Messages Area -->
+                <div class="p-3 flex-grow-1 overflow-auto" style="background-color: #cfdcc9;">
+                    
+                    <!-- Received Message -->
+                    <div class="d-flex mb-3">
+                        <div class="bg-white p-3 rounded shadow-sm border" style="max-width: 75%;">
+                            <p class="mb-1">Hi! I saw your listing for the TI-84 Graphing Calculator. Is it still available to borrow for the midterms tomorrow?</p>
+                            <small class="text-muted float-end" style="font-size: 0.75rem;">10:30 AM</small>
+                        </div>
+                    </div>
+
+                    <!-- Sent Message -->
+                    <div class="d-flex justify-content-end mb-3">
+                        <div class="bg-primary text-white p-3 rounded shadow-sm" style="max-width: 75%;">
+                            <p class="mb-1">Hey Sarah! Yes, it's available. Where on campus do you want to meet up to grab it?</p>
+                            <small class="text-white-50 float-end" style="font-size: 0.75rem;">10:35 AM</small>
+                        </div>
+                    </div>
+
+                    <!-- Received Message -->
+                    <div class="d-flex mb-3">
+                        <div class="bg-white p-3 rounded shadow-sm border" style="max-width: 75%;">
+                            <p class="mb-1">Awesome! Could we meet by the library entrance around 2:00 PM?</p>
+                            <small class="text-muted float-end" style="font-size: 0.75rem;">10:42 AM</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Chat Input Area -->
+                <div class="p-3 bg-white border-top"
+                    <form class="input-group">
+                        <button class="btn btn-outline-secondary" type="button"><i class="bi bi-paperclip"></i></button>
+                        <input type="text" class="form-control" placeholder="Type your message here...">
+                        <button class="btn btn-primary" type="submit"><i class="bi bi-send"></i> Send</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
     <!-- BorrowBox Footer -->
 <footer class="container-fluid bg-success text-white p-4 mt-4"
         style="background-color: #003f38 !important;">
