@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <title>Upload Item | BorrowBox</title>
+</head>
+<body class="bg-light">
+
+  <div id="navbar"></div>
+
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5">
+          <div class="d-flex align-items-center mb-4">
+            <div class="bg-success text-white rounded-3 p-3 me-3 fs-3">
+              <i class="bi bi-cloud-arrow-up"></i>
+            </div>
+            <div>
+              <h2 class="fw-bold mb-1">List &amp; Upload an Item</h2>
+              <p class="text-secondary mb-0">Share your gear, books, or electronics with fellow campus students.</p>
+            </div>
+          </div>
+
+          <div id="alertContainer"></div>
+
+          <form id="uploadItemForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-12">
+                <label for="itemTitle" class="form-label fw-semibold">Item Title <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="itemTitle" placeholder="e.g. HP EliteBook i5 Laptop, Casio Calculator" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="itemCategory" class="form-label fw-semibold">Category <span class="text-danger">*</span></label>
+                <select class="form-select" id="itemCategory" required>
+                  <option value="" selected disabled>Choose category...</option>
+                  <option value="Textbooks">Textbooks</option>
+                  <option value="Calculators">Calculators</option>
+                  <option value="Electronics">Electronics</option>
+                  <option value="Projectors">Projectors</option>
+                  <option value="Tools">Tools</option>
+                  <option value="Sports">Sports</option>
+                  <option value="Lab Equipment">Lab Equipment</option>
+                  <option value="Others">Others</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="maxDays" class="form-label fw-semibold">Maximum Borrow Days <span class="text-danger">*</span></label>
+                <input type="number" class="form-control" id="maxDays" placeholder="e.g. 5" min="1" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="itemCost" class="form-label fw-semibold">Borrowing Fee / Deposit (UGX)</label>
+                <input type="text" class="form-control" id="itemCost" placeholder="e.g. Free or 10,000">
+                <div class="form-text">Type 'Free' or specify deposit amount.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="campusLocation" class="form-label fw-semibold">Pickup Location on Campus <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="campusLocation" placeholder="e.g. Main Library, Engineering Block" required>
+              </div>
+
+              <div class="col-12">
+                <label for="itemDescription" class="form-label fw-semibold">Item Description &amp; Condition</label>
+                <textarea class="form-control" id="itemDescription" rows="4" placeholder="Describe specifications, model, and current physical condition..."></textarea>
+              </div>
+
+              <div class="col-12">
+                <label for="itemImage" class="form-label fw-semibold">Upload Item Photo</label>
+                <input class="form-control" type="file" id="itemImage" accept="image/*">
+              </div>
+
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-success btn-lg w-100 fw-semibold py-3" style="background-color: #115e3b;">
+                  <i class="bi bi-check-circle me-2"></i>Publish Item to BorrowBox
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      async function loadComponent(id, file) {
+        try {
+          let response = await fetch(file);
+          if (response.ok) document.getElementById(id).innerHTML = await response.text();
+        } catch (error) { console.error(`Error loading ${file}:`, error); }
+      }
+      await loadComponent("navbar", "navbar.html");
+      await loadComponent("footer", "footer.html");
+
+      // Handle Form Submission interactively
+      const form = document.getElementById('uploadItemForm');
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const title = document.getElementById('itemTitle').value;
+        if (!title) return;
+
+        const alertContainer = document.getElementById('alertContainer');
+        alertContainer.innerHTML = `
+          <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i><strong>Success!</strong> Your item has been successfully listed on BorrowBox and is now live for campus borrowing.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        `;
+        form.reset();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
