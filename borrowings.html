@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,10 +16,12 @@
       text-decoration: none;
       transition: color 0.2s ease-in-out;
     }
+
     .nav-item-hover:hover,
     .nav-item-hover.active-tab {
       color: #198754 !important;
     }
+
     .nav-item-hover::after {
       content: '';
       position: absolute;
@@ -31,17 +34,53 @@
       transition: transform 0.2s ease-in-out;
       border-radius: 50px;
     }
+
     .nav-item-hover:hover::after,
     .nav-item-hover.active-tab::after {
       transform: scaleX(1);
     }
   </style>
 </head>
+
 <body>
+<<<<<<< HEAD
+=======
+
+  <!-- NAVBAR LINK-->
+  <div id="navbar"> </div>
+  <!-- END NAVBAR -->
+
+  <main class="container-fluid px-lg-5 py-4">
+    <div class="container mb-4">
+      <h2 class="fw-bold">My Borrowings</h2>
+      <p class="text-secondary">Here are the items you have borrowed.</p>
+    </div>
+
+    <!-- CURRENT BORROWINGS -->
+    <div class="container mb-5">
+      <h4 class="text-success mb-3">Current Borrowings</h4>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <img src="laptop.jpg" class="card-img-top" alt="Lenovo Laptop" style="height: 180px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">Lenovo Laptop (i5, 8GB RAM)</h5>
+              <p class="card-text">
+                Owned by: Muyomba Antonio.<br>
+                Borrowed on: Oct 25, 2026<br>
+                Return by: Nov 11, 2026
+              </p>
+              <span class="badge bg-success">6 Days Left</span>
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <a href="messages.html" class="btn btn-success">View Details</a>
+                <a href="messages.html" class="btn btn-outline-success">Request Extension</a>
+
+>>>>>>> da5a67a95b6b1bbb1fa68921c6b1497a57efc222
     <!-- NAVBAR LINK-->
     <div id="navbar"></div>
     <!-- NAVBAR -->
     <div id="navbar"></div>
+<<<<<<< HEAD
     <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
       <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
         <a class="navbar-brand d-flex align-items-center text-decoration-none m-0" href="index.html">
@@ -130,6 +169,9 @@
       </div>
     </nav>
 
+=======
+
+>>>>>>> da5a67a95b6b1bbb1fa68921c6b1497a57efc222
     <!-- END NAVBAR -->
     
     <main class="container-fluid px-lg-5 py-4">
@@ -160,126 +202,140 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card h-100 shadow-sm">
-              <img src="shoes.jpg" class="card-img-top" alt="Safety shoes" style="height: 180px; object-fit: cover;">
-              <div class="card-body">
-                <h5 class="card-title">Safety shoes (size,42)</h5>
-                <p class="card-text">
-                  Owned by: Okello christopher.<br>
-                  Borrowed on: Nov 02, 2026<br>
-                  Return by: Nov 09, 2026
-                </p>
-                <span class="badge bg-success">6 Days Left</span>
-                <div class="mt-3 d-flex flex-wrap gap-2">
-                  <a href="messages.html" class="btn btn-success">View Details</a>
-                  <a href="messages.html" class="btn btn-outline-success">Request Extension</a>
-                </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <img src="shoes.jpg" class="card-img-top" alt="Safety shoes" style="height: 180px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">Safety shoes (size,42)</h5>
+              <p class="card-text">
+                Owned by: Okello christopher.<br>
+                Borrowed on: Nov 02, 2026<br>
+                Return by: Nov 09, 2026
+              </p>
+              <span class="badge bg-success">6 Days Left</span>
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <a href="messages.html" class="btn btn-success">View Details</a>
+                <a href="messages.html" class="btn btn-outline-success">Request Extension</a>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card h-100 shadow-sm">
-              <img src="textbook.jpg" class="card-img-top" alt="Text Book" style="height: 180px; object-fit: cover;">
-              <div class="card-body">
-                <h5 class="card-title">Text Book(IT)</h5>
-                <p class="card-text">
-                  Owned by: Otim Ian.<br>
-                  Borrowed on: Nov 02, 2026<br>
-                  Return by: Nov 20, 2026
-                </p>
-                <span class="badge bg-success">11 Days Left</span>
-                <div class="mt-3 d-flex flex-wrap gap-2">
-                  <a href="messages.html" class="btn btn-success">View Details</a>
-                  <a href="messages.html" class="btn btn-outline-success">Request Extension</a>
-                </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <img src="textbook.jpg" class="card-img-top" alt="Text Book" style="height: 180px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">Text Book(IT)</h5>
+              <p class="card-text">
+                Owned by: Otim Ian.<br>
+                Borrowed on: Nov 02, 2026<br>
+                Return by: Nov 20, 2026
+              </p>
+              <span class="badge bg-success">11 Days Left</span>
+              <div class="mt-3 d-flex flex-wrap gap-2">
+                <a href="messages.html" class="btn btn-success">View Details</a>
+                <a href="messages.html" class="btn btn-outline-success">Request Extension</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- PAST BORROWINGS -->
-      <div class="container">
-        <h4 class="text-success mb-3">Past Borrowings</h4>
-        <div class="row">
-          <div class="col-md-4 mb-3">
-            <div class="card h-100 shadow-sm">
-              <img src="calculator.jpg" class="card-img-top" alt="Casio Calculator" style="height: 180px; object-fit: cover;">
-              <div class="card-body">
-                <h5 class="card-title">Casio FX-991ES Plus</h5>
-                <p class="card-text">
-                  Owned by: Ahabwe B.<br>
-                  Borrowed: Sep 10, 2026<br>
-                  Returned: Sep 18, 2026
-                </p>
-                <span class="badge bg-success">Returned</span>
-                <div class="mt-3"><a href="messages.html" class="btn btn-outline-success">Rate &amp; Review</a></div>
-              </div>
+    <!-- PAST BORROWINGS -->
+    <div class="container">
+      <h4 class="text-success mb-3">Past Borrowings</h4>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <img src="calculator.jpg" class="card-img-top" alt="Casio Calculator"
+              style="height: 180px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">Casio FX-991ES Plus</h5>
+              <p class="card-text">
+                Owned by: Ahabwe B.<br>
+                Borrowed: Sep 10, 2026<br>
+                Returned: Sep 18, 2026
+              </p>
+              <span class="badge bg-success">Returned</span>
+              <div class="mt-3"><a href="messages.html" class="btn btn-outline-success">Rate &amp; Review</a></div>
             </div>
           </div>
+        </div>
 
-          <div class="col-md-4 mb-3">
-            <div class="card h-100 shadow-sm">
-              <img src="Laptop Charger.jpg" class="card-img-top" alt="HP EliteBook Charger" style="height: 180px; object-fit: cover;">
-              <div class="card-body">
-                <h5 class="card-title">HP EliteBook Charger</h5>
-                <p class="card-text">
-                  Owned by: Godi Donald.<br>
-                  Borrowed: Aug 05, 2026<br>
-                  Returned: Aug 12, 2026
-                </p>
-                <span class="badge bg-success">Returned</span>
-                <div class="mt-3"><a href="messages.html" class="btn btn-outline-success">Rate &amp; Review</a></div>
-              </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <img src="Laptop Charger.jpg" class="card-img-top" alt="HP EliteBook Charger"
+              style="height: 180px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">HP EliteBook Charger</h5>
+              <p class="card-text">
+                Owned by: Godi Donald.<br>
+                Borrowed: Aug 05, 2026<br>
+                Returned: Aug 12, 2026
+              </p>
+              <span class="badge bg-success">Returned</span>
+              <div class="mt-3"><a href="messages.html" class="btn btn-outline-success">Rate &amp; Review</a></div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card h-100 shadow-sm">
-              <img src="headsets.jpg" class="card-img-top" alt="Oraimo Headsets" style="height: 180px; object-fit: cover;">
-              <div class="card-body">
-                <h5 class="card-title">Oraimo headsets</h5>
-                <p class="card-text">
-                  Owned by: Mwesigwa Jeremiah.<br>
-                  Borrowed: Aug 05, 2026<br>
-                  Returned: Aug 12, 2026
-                </p>
-                <span class="badge bg-success">Returned</span>
-                <div class="mt-3"><a href="messages.html" class="btn btn-outline-success">Rate &amp; Review</a></div>
-              </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm">
+            <img src="headsets.jpg" class="card-img-top" alt="Oraimo Headsets"
+              style="height: 180px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title">Oraimo headsets</h5>
+              <p class="card-text">
+                Owned by: Mwesigwa Jeremiah.<br>
+                Borrowed: Aug 05, 2026<br>
+                Returned: Aug 12, 2026
+              </p>
+              <span class="badge bg-success">Returned</span>
+              <div class="mt-3"><a href="messages.html" class="btn btn-outline-success">Rate &amp; Review</a></div>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
+<<<<<<< HEAD
 
     <!--FOOTER -->
 
     <!-- BORROWBOX FOOTER -->
 
+=======
+  <!--FOOTER -->
+    <!--FOOTER -->
+>>>>>>> da5a67a95b6b1bbb1fa68921c6b1497a57efc222
     <div id="footer"></div>
     <!-- END FOOTER -->
 
-    <!-- SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        async function loadComponent(id, file) {
-          try {
-            let response = await fetch(file);
-            if (response.ok) {
-              document.getElementById(id).innerHTML = await response.text();
-            }
-          } catch (error) {
-            console.error(`Error loading ${file}:`, error);
-          }
-        }
+  <!-- BORROWBOX FOOTER -->
+  <div id="footer"></div>
+  <!-- END FOOTER -->
 
-        // Automatically inject navbar.html and footer.html into their placeholder divs
-        await loadComponent("navbar", "navbar.html");
-        await loadComponent("footer", "footer.html");
-      });
-    </script>
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      async function loadComponent(id, file) {
+        try {
+          let response = await fetch(file);
+          if (response.ok) {
+            document.getElementById(id).innerHTML = await response.text();
+          }
+        } catch (error) {
+          console.error(`Error loading ${file}:`, error);
+        }
+      }
+
+      // Automatically inject navbar.html and footer.html into their placeholder divs
+      await loadComponent("navbar", "navbar.html");
+      await loadComponent("footer", "footer.html");
+    });
+  </script>
 </body>
+
 </html>
