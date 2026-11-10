@@ -14,7 +14,72 @@
       text-decoration: none;
       transition: color 0.2s ease-in-out;
     }
+<<<<<<< HEAD
     .nav-item-hover:hover, .nav-item-hover.active-tab { color: #198754 !important; }
+=======
+    .nav-item-hover:hover,
+    .nav-item-hover.active-tab {
+      color: #198754 !important;
+    }
+    .nav-item-hover::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -18px;
+      height: 3px;
+      background-color: #115e3b;
+      transform: scaleX(0);
+      transition: transform 0.2s ease-in-out;
+      border-radius: 50px;
+    }
+    .nav-item-hover:hover::after,
+    .nav-item-hover.active-tab::after {
+      transform: scaleX(1);
+    }
+
+    .row.bg-white.rounded.shadow-sm.overflow-hidden.border {
+      border-radius: 0.75rem !important;
+    }
+
+    #chat-list .chat-item {
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+      border-radius: 0.5rem;
+      margin: 0.35rem 0.5rem;
+      padding-left: 0.9rem;
+      padding-right: 0.9rem;
+    }
+
+    #chat-list .chat-item:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04);
+    }
+
+    #chat-messages {
+      padding-top: 1.1rem !important;
+      padding-bottom: 1.1rem !important;
+    }
+
+    #chat-messages .d-flex {
+      align-items: flex-end;
+    }
+
+    #chat-messages .p-3.rounded.shadow-sm {
+      border-radius: 0.9rem !important;
+    }
+
+    #message-form .form-control {
+      border-top-left-radius: 0.75rem !important;
+      border-bottom-left-radius: 0.75rem !important;
+      border-right: 0;
+    }
+
+    #message-form .btn {
+      border-top-right-radius: 0.75rem !important;
+      border-bottom-right-radius: 0.75rem !important;
+      border-left: 0;
+    }
+>>>>>>> eb938875679bc939807e2bcebb4ff85926860154
   </style>
 </head>
 <body>
@@ -88,8 +153,14 @@
         </div>
 
         <!-- ACTIVE CHAT -->
+<<<<<<< HEAD
         <div class="col-md-8 col-lg-9 p-0 d-flex flex-column" style="height: calc(100vh - 180px); min-height: 500px;">
           <div class="p-3 border-bottom bg-white d-flex justify-content-between align-items-center">
+=======
+        <div id="active-chat" class="col-md-8 col-lg-9 p-0 d-flex flex-column"
+             style="height: calc(100vh - 180px); min-height: 500px;">
+          <div class="p-3 border-bottom bg-white d-flex justify-content-between align-items-center" style="padding-top: 0.9rem !important; padding-bottom: 0.9rem !important;">
+>>>>>>> eb938875679bc939807e2bcebb4ff85926860154
             <div class="d-flex align-items-center">
 <<<<<<< HEAD
               <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3 fw-bold"
