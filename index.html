@@ -40,8 +40,95 @@
 <body>
 
     <!-- NAVBAR -->
-    <div id="navbar"></div>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
+      <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
+        <a class="navbar-brand d-flex align-items-center text-decoration-none m-0" href="index.html">
+          <div class="rounded-4 p-2 me-3 d-flex align-items-center justify-content-center text-white"
+               style="width: 48px; height: 48px; background-color: #0b3c29">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <div class="brand-text d-flex flex-column">
+            <span class="fw-bold fs-4 lh-1 mb-1" style="color: #0b3c29; letter-spacing: -0.5px;">BorrowBox</span>
+            <span class="text-muted" style="font-size: 0.78rem;">What You Need, When You Need It.</span>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center flex-grow-1" id="navbarSupportedContent">
+          <ul class="navbar-nav flex-row flex-wrap gap-4 gap-lg-5 align-items-center m-0">
+            
+            <li class="nav-item position-relative">
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2 active-tab" href="index.html" aria-current='page'>
+                <i class="bi bi-house-door"></i>
+                HOME
+              </a>
+            </li>
+            <li class="nav-item position-relative">
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="index.html#search" >
+                <i class="bi bi-search"></i>
+                Browse Items
+              </a>
+            </li>
+            <li class="nav-item position-relative">
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="borrowings.html" >
+                <i class="bi bi-calendar-check"></i>
+                My Borrowings
+              </a>
+            </li>
+            <li class="nav-item position-relative">
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="messages.html" >
+                <i class="bi bi-envelope"></i>
+                Messages
+              </a>
+            </li>
+            <li class="nav-item position-relative">
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="my lendings.html" >
+                <i class="bi bi-stopwatch"></i>
+                My Lendings
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center gap-4">
+          <button class="btn p-0 text-secondary position-relative border-0 bg-transparent"
+                  type="button" aria-label="Notifications">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+          </button>
+
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center gap-2 text-decoration-none dropdown-toggle"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="rounded-circle text-white d-flex align-items-center justify-content-center fw-bold overflow-hidden"
+                   style="width: 42px; height: 42px; background-color: #072213;">G</div>
+              <div class="d-flex flex-column lh-sm">
+                <span class="fw-bold text-dark" style="font-size: 0.95rem;">GODI</span>
+                <span class="text-muted" style="font-size: 0.75rem;">Student</span>
+              </div>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3 mt-2">
+              <li><a class="dropdown-item py-2 fw-semibold" href="borrowings.html">BORROWING</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="my lendings.html">LENDING</a></li>
+              <li><a class="dropdown-item py-2 fw-semibold" href="index.html">SIGN OUT</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
     <!-- END NAVBAR -->
+    
     
      <main>
       <!-- HOMEPAGE By Ahabwe Benjamin -->
@@ -99,7 +186,7 @@
           <!-- ITEM 1 -->
           <div class="col"><div class="card h-100 border shadow-sm">
             <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small">
-              <img src="Calculator2.jpg" class="card-img-top" alt="Casio Calculator" style="height: 273px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
+              <img src="Calculator2.jpg" class="card-img-top" alt="Casio Calculator" style="height: 320px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
               </div></div>
             <div class="card-body d-flex flex-column">
               <h3 class="h6 fw-bold mb-1">Casio FX-991ES Plus</h3><div class="small text-secondary mb-3">Calculators</div>
@@ -110,7 +197,7 @@
 
           <!-- ITEM 2 -->
           <div class="col"><div class="card h-100 border shadow-sm">
-            <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="hp laptop.jpg" class="card-img-top" alt="hp laptop" style="height: 273px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
+            <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="hp laptop.jpg" class="card-img-top" alt="hp laptop" style="height: 320px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
             <div class="card-body d-flex flex-column">
             </div>
             <div class="card-body d-flex flex-column">
@@ -122,7 +209,7 @@
 
           <!-- ITEM 3 -->
           <div class="col"><div class="card h-100 border shadow-sm">
-            <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="projector.jpg" class="card-img-top" alt="Epson projector" style="height: 273px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
+            <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="projector.jpg" class="card-img-top" alt="Epson projector" style="height: 320px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
             <div class="card-body d-flex flex-column">
               <h3 class="h6 fw-bold mb-1">Epson Projector</h3><div class="small text-secondary mb-3">Projectors</div>
               <div class="d-flex align-items-center gap-2 mb-3"><span class="badge rounded-pill bg-dark">G</span><div class="small"><div class="fw-semibold">Donald Godi.</div><div class="text-secondary">&#9733; 4.7 (9 reviews)</div></div></div>
@@ -132,7 +219,7 @@
 
           <!-- ITEM 4 -->
           <div class="col"><div class="card h-100 border shadow-sm">
-            <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="textbook.jpg" class="card-img-top" alt="Computer science textbook" style="height: 273px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
+            <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="textbook.jpg" class="card-img-top" alt="Computer science textbook" style="height: 320px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
             <div class="card-body d-flex flex-column">
               <h3 class="h6 fw-bold mb-1">Computer Science Textbook</h3><div class="small text-secondary mb-3">Textbooks</div>
               <div class="d-flex align-items-center gap-2 mb-3"><span class="badge rounded-pill bg-dark">J</span><div class="small"><div class="fw-semibold">Mwesigwa Jeremiah.</div><div class="text-secondary">&#9733; 4.6 (11 reviews)</div></div></div>
@@ -146,6 +233,33 @@
     
 
     <!-- BORROWBOX FOOTER -->
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+ <div id="footer"></div>
+    <!-- END FOOTER -->
+    <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      async function loadComponent(id, file) {
+        try {
+          let response = await fetch(file);
+          if (response.ok) {
+            document.getElementById(id).innerHTML = await response.text();
+          }
+        } catch (error) {
+          console.error(`Error loading ${file}:`, error);
+        }
+      }
+
+      // Automatically inject navbar.html and footer.html into their placeholder divs
+      await loadComponent("navbar", "navbar.html");
+      await loadComponent("footer", "footer.html");
+    });
+  </script>
+=======
+>>>>>>> 83c76c6cc3ca0afb7565ae553216e66d5c5f8785
     <div id="footer"></div>
     <!-- END FOOTER -->
      
@@ -168,5 +282,6 @@
         await loadComponent("footer", "footer.html");
       });
     </script>
+>>>>>>> 13b8ceaf49b772eb15b8e1571ad8f26e2fcdc1ba
   </body>
 </html>
