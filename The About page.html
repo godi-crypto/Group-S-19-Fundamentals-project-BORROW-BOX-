@@ -4,9 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <title>BORROW-BOX</title>
+  <title>BORROW-BOX - About Us</title>
   <style>
     .nav-item-hover {
       color: #212529 !important;
@@ -34,6 +33,12 @@
     .nav-item-hover:hover::after,
     .nav-item-hover.active-tab::after {
       transform: scaleX(1);
+    }
+    .team-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 3px solid #198754;
     }
   </style>
 </head>
@@ -65,43 +70,36 @@
 
         <div class="collapse navbar-collapse justify-content-center flex-grow-1" id="navbarSupportedContent">
           <ul class="navbar-nav flex-row flex-wrap gap-4 gap-lg-5 align-items-center m-0">
-            
             <li class="nav-item position-relative">
-              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2 active-tab" href="index.html" aria-current='page'>
-                <i class="bi bi-house-door"></i>
-                HOME
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="index.html">
+                <i class="bi bi-house-door"></i> HOME
               </a>
             </li>
             <li class="nav-item position-relative">
-              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="index.html#search" >
-                <i class="bi bi-search"></i>
-                Browse items
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="index.html#search">
+                <i class="bi bi-search"></i> Browse items
               </a>
             </li>
             <li class="nav-item position-relative">
-              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="borrowings.html" >
-                <i class="bi bi-calendar-check"></i>
-                My Borrowings
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="borrowings.html">
+                <i class="bi bi-calendar-check"></i> My Borrowings
               </a>
             </li>
             <li class="nav-item position-relative">
-              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="messages.html" >
-                <i class="bi bi-envelope"></i>
-                Messages
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="messages.html">
+                <i class="bi bi-envelope"></i> Messages
               </a>
             </li>
-        <li class="nav-item position-relative">
-              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="my lendings.html" >
-                <i class="bi bi-stopwatch"></i>
-                My Lendings
+            <li class="nav-item position-relative">
+              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="my lendings.html">
+                <i class="bi bi-stopwatch"></i> My Lendings
               </a>
-            </li>  
+            </li> 
           </ul>
         </div>
 
         <div class="d-flex align-items-center gap-4">
-          <button class="btn p-0 text-secondary position-relative border-0 bg-transparent"
-                  type="button" aria-label="Notifications">
+          <button class="btn p-0 text-secondary position-relative border-0 bg-transparent" type="button" aria-label="Notifications">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
               <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
@@ -109,10 +107,8 @@
           </button>
 
           <div class="dropdown">
-            <a href="#" class="d-flex align-items-center gap-2 text-decoration-none dropdown-toggle"
-               data-bs-toggle="dropdown" aria-expanded="false">
-              <div class="rounded-circle text-white d-flex align-items-center justify-content-center fw-bold overflow-hidden"
-                   style="width: 42px; height: 42px; background-color: #072213;">G</div>
+            <a href="#" class="d-flex align-items-center gap-2 text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="rounded-circle text-white d-flex align-items-center justify-content-center fw-bold overflow-hidden" style="width: 42px; height: 42px; background-color: #072213;">G</div>
               <div class="d-flex flex-column lh-sm">
                 <span class="fw-bold text-dark" style="font-size: 0.95rem;">GODI</span>
                 <span class="text-muted" style="font-size: 0.75rem;">Student</span>
@@ -129,47 +125,92 @@
     </nav>
     <!-- END NAVBAR -->
 
-    <!--The About Page by AHABWE BENJAMIN-->
-     <body>
-      <div class="card">
-      <div class="card-header">
-        About Us
+    <!-- MAIN CONTENT: ABOUT US & TEAM -->
+    <main class="container my-5">
+      <div class="card shadow-sm border-0 mb-5">
+        <div class="card-header bg-success text-white fw-bold py-3" style="background-color: #0b3c29 !important;">
+          About Us
+        </div>
+        <div class="card-body p-4">
+          <h5 class="text-success fw-bold">What You Need. When You Need It.</h5>
+          <p class="card-text">BorrowBox is a convenient web-based platform designed to enable individuals to access certain items or requirements at a cheaper price or for free for a specified period of time. Our goal is to make sharing resources easier, more affordable, and efficient for everyone.</p>
+          
+          <h5 class="text-success fw-bold mt-4">Who We Are</h5>
+          <p class="card-text">BorrowBox is a campus-based project that connects people who are willing to lend items to those who want to borrow them. The item can be an electronic device, a book, textbook, charger, and so many others.</p>
+          
+          <h5 class="text-success fw-bold mt-4">Our Vision</h5>
+          <p class="card-text">To become a trusted platform that promotes resource sharing, sustainability, and stronger relationships.</p> 
+          
+          <h5 class="text-success fw-bold mt-4">Meet The Team</h5>
+          <p class="card-text mb-0">The masterminds behind this extraordinary project are a team of passionate and motivated scientists who have gained several skills and have crafted this platform together.</p>
+        </div>
       </div>
-      <div class="card-body">
-          <h5 class="card-text">What You Need.When You Need it</h5>
-          <p class="card-text">BorrowBox is a convenient web-based platform that is designed to enable individuals to access certain items or requirements at a cheaper price or for free for a specified period of time. Our goal is to make sharing resources easier, more affordable and efficient to everyone.<br>
-            <h5 class="card-text">Who We Are</h5>
-            <p class="card-text">BorrowBox is a campus-based project that connects people who are willing to lend items to those who want to borrow the items.<br>The item can be an electronic device, a book, textbook, charger and so many others.</p>
-            <h5 class="card-text">Our Vision</h5>
-            <p class="card-text">To become a trusted platform that promotes resource sharing, sustainability and stronger relationship.</p> 
-            <h5 class="card-text">Meet The Team</h5>
-            <p class="card-text">The masterminds behind this extraordinary project are a team of passionate and motivated scientists who have gained several skills and have crafted this platform together.</p>
+
+      <!-- Team Members Grid -->
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <img src="godi.png" alt="Donald Godi" class="rounded-circle team-img mb-3">
+              <h5 class="card-title fw-bold">Donald Godi</h5>
+              <p class="card-text text-muted small mb-0">Data Analyst and IT Expert<br>Bachelor of Science in Data Science</p>
+            </div>
           </div>
+        </div>
 
-            <div class="row">
-  <div class="col-md-4 mb-3">
-    <div class="card">
-      <div class="card-body">
-        <img src="godi.png" alt="godi.jpg" class="img-fluid rounded-start">
-        <h5 class="card-title">Donald Godi</h5>
-        <p class="card-text">Data Analyst and IT Expert</p>
-        <p class="card-text">Bachelor of Science in Data Science</p>
-        <a href="#" class="btn btn-success">View Further Details</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4 mb-3">
-    <div class="card">
-      <div class="card-body">
-        <img src="benja.jpg" alt="benja.jpg" class="img-fluid rounded-start">
-        <h5 class="card-title">Benjamin Ahabwe</h5>
-        <p class="card-text">Computer Scientist and Music Producer</p>
-        <p class="card-text">Bachelor of Science in Computer Science</p>
-        <a href="#" class="btn btn-success">View Further Details</a>
-      </div>
-    </div>
-  </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <img src="benja.jpg" alt="Benjamin Ahabwe" class="rounded-circle team-img mb-3">
+              <h5 class="card-title fw-bold">Benjamin Ahabwe</h5>
+              <p class="card-text text-muted small mb-0">Computer Scientist and Music Producer<br>Bachelor of Science in Computer Science</p>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <img src="jerry.jpg" alt="Mwesigwa Jeremiah" class="rounded-circle team-img mb-3">
+              <h5 class="card-title fw-bold">Mwesigwa Jeremiah</h5>
+              <p class="card-text text-muted small mb-0">Computer Scientist<br>Bachelor of Science in Computer Science</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <img src="antonio.jpg" alt="Antonio Muyomba" class="rounded-circle team-img mb-3">
+              <h5 class="card-title fw-bold">Antonio Muyomba</h5>
+              <p class="card-text text-muted small mb-0">Data Scientist and Analyst<br>Bachelor of Science in Data Science</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <img src="chris.jpeg" alt="Okello Christopher" class="rounded-circle team-img mb-3">
+              <h5 class="card-title fw-bold">Okello Christopher</h5>
+              <p class="card-text text-muted small mb-0">Data Scientist and Analyst<br>Bachelor of Science in Data Science</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 text-center p-3">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+              <img src="ian.jpg" alt="Otim Ian Aleni" class="rounded-circle team-img mb-3">
+              <h5 class="card-title fw-bold">Otim Ian Aleni</h5>
+              <p class="card-text text-muted small mb-0">Computer Scientist<br>Bachelor of Science in Computer Science</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+<<<<<<< HEAD
   <div class="col-md-4 mb-3">
     <div class="card">
       <div class="card-body">
@@ -231,6 +272,10 @@
 <!-- BORROWBOX FOOTER -->
     <footer class="container-fluid bg-success text-white p-4 mt-4"
             style="background-color: #0b3c29 !important;">
+=======
+    <!-- BORROWBOX FOOTER -->
+    <footer class="container-fluid bg-success text-white p-4 mt-5" style="background-color: #0b3c29 !important;">
+>>>>>>> 13b8ceaf49b772eb15b8e1571ad8f26e2fcdc1ba
       <div class="row align-items-center">
         <div class="col-md-4 text-md-start text-center mb-3 mb-md-0">
           <h3 class="fw-bold mb-0">
@@ -238,29 +283,34 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
               <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
               <line x1="12" y1="22.08" x2="12" y2="12"/>
-            </svg>BorrowBox</h3>
+            </svg> BorrowBox
+          </h3>
           <small>What You Need, When You Need It.</small>
         </div>
+        
+        <!-- Updated Footer Navigation Links -->
         <div class="col-md-4 text-center mb-3 mb-md-0">
           <a href="The About page.html" class="text-white text-decoration-none mx-2">About Us</a>
-          <a href="#" class="text-white text-decoration-none mx-2">Help</a>
+          <a href="help.html" class="text-white text-decoration-none mx-2">Help</a>
           <span>|</span>
-          <a href="#" class="text-white text-decoration-none mx-2">Terms &amp; Conditions</a>
+          <a href="terms.html" class="text-white text-decoration-none mx-2">Terms &amp; Conditions</a>
           <span>|</span>
-          <a href="#" class="text-white text-decoration-none mx-2">Privacy Policy</a>
+          <a href="privacy.html" class="text-white text-decoration-none mx-2">Privacy Policy</a>
         </div>
+
         <div class="col-md-4 text-md-end text-center">
           <div class="mb-3">
-            <a href="#" class="btn btn-light btn-sm rounded-circle fw-bold mx-1">f</a>
-            <a href="#" class="btn btn-light btn-sm rounded-circle fw-bold mx-1">𝕏</a>
-            <a href="#" class="btn btn-light btn-sm rounded-circle fw-bold mx-1">◎</a>
-            <a href="#" class="btn btn-light btn-sm rounded-circle fw-bold mx-1">▶</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="btn btn-light btn-sm rounded-circle fw-bold mx-1">f</a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="btn btn-light btn-sm rounded-circle fw-bold mx-1">𝕏</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="btn btn-light btn-sm rounded-circle fw-bold mx-1">◎</a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="btn btn-light btn-sm rounded-circle fw-bold mx-1">▶</a>
           </div>
-          <small>©2026 BorrowBox. All rights reserved.</small>
+          <small>&copy; 2026 BorrowBox. All rights reserved.</small>
         </div>
       </div>
     </footer>
     <!-- END FOOTER -->
+
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+</body>
 </html>
