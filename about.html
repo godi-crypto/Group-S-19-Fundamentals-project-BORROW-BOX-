@@ -119,6 +119,14 @@
           } catch (error) { console.error(`Error loading ${file}:`, error); }
         }
         await loadComponent("navbar", "navbar.html");
+        const loginProfileName = sessionStorage.getItem("borrowboxLoginName");
+        const profileNameElement = document.querySelector("#navbar [data-profile-name]");
+        if (loginProfileName && profileNameElement) {
+          profileNameElement.textContent = loginProfileName;
+          const profileInitialElement = document.querySelector("#navbar [data-profile-initial]");
+          if (profileInitialElement) profileInitialElement.textContent = loginProfileName.trim().charAt(0).toUpperCase();
+        }
+        document.querySelector('#navbar a[href="login.html"]')?.addEventListener("click", () => sessionStorage.removeItem("borrowboxLoginName"));
         await loadComponent("footer", "footer.html");
       });
     </script>

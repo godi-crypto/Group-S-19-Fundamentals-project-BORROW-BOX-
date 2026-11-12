@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <title>Messages | BorrowBox</title>
+  <title>BORROW-BOX</title>
   <style>
     .nav-item-hover {
       color: #212529 !important;
@@ -14,9 +15,6 @@
       text-decoration: none;
       transition: color 0.2s ease-in-out;
     }
-<<<<<<< HEAD
-    .nav-item-hover:hover, .nav-item-hover.active-tab { color: #198754 !important; }
-=======
     .nav-item-hover:hover,
     .nav-item-hover.active-tab {
       color: #198754 !important;
@@ -79,73 +77,67 @@
       border-bottom-right-radius: 0.75rem !important;
       border-left: 0;
     }
->>>>>>> eb938875679bc939807e2bcebb4ff85926860154
+
+    @media (max-width: 767.98px) {
+      #conversation-list { height: 220px !important; min-height: 0 !important; border-right: 0 !important; border-bottom: 1px solid #dee2e6; }
+      #active-chat { height: 60vh !important; min-height: 360px !important; }
+    }
   </style>
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <div id="navbar"></div>
+    <!--END of NAVBAR-->
     
+    <!-- MAIN CONTENT -->
     <main class="container-fluid my-3 px-lg-4">
       <div class="row bg-white rounded shadow-sm overflow-hidden border">
         <!-- CONVERSATIONS LIST -->
-        <div class="col-md-4 col-lg-3 p-0" style="height: calc(100vh - 180px); min-height: 500px; overflow-y: auto; border-right: 1px solid #dee2e6;">
+        <div id="conversation-list" class="col-md-4 col-lg-3 p-0" style="height: calc(100vh - 180px); min-height: 500px; overflow-y: auto; border-right: 1px solid #dee2e6;">
           <div class="p-3 border-bottom">
             <div class="input-group">
-              <input type="text" class="form-control form-control-sm" placeholder="Search chats or items...">
-              <button class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-search"></i></button>
+              <input type="text" class="form-control form-control-sm" placeholder="Search chats or items..." aria-label="Search chats or items">
+              <button class="btn btn-outline-secondary btn-sm" type="button" aria-label="Search"><i class="bi bi-search"></i></button>
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div class="list-group list-group-flush">
-            <a href="#" class="list-group-item list-group-item-action active p-3 border-bottom"
-=======
           <div id="chat-list" class="list-group list-group-flush">
             <a href="#active-chat" class="list-group-item list-group-item-action active p-3 border-bottom chat-item"
-               data-name="Okelo Christopher" data-item="TI-84 Calculator" data-initials="O" data-chat-id="okelo"
->>>>>>> 83c76c6cc3ca0afb7565ae553216e66d5c5f8785
+               data-name="Godi Donald" data-item="TI-84 Calculator" data-initials="G" data-chat-id="godi"
                style="background-color: #eaf5ee; border-color: #cfe7d7; color: #0b3c29;">
               <div class="d-flex justify-content-between align-items-center">
-                <h6 class="mb-1 fw-bold">Geno Joshua</h6>
+                <h6 class="mb-1 fw-bold">Godi Donald</h6>
                 <small class="text-muted">10:42 AM</small>
               </div>
-              <p class="mb-1 text-muted small text-truncate">Awesome! Could we meet by the library entrance...</p>
+              <p class="mb-1 text-muted small text-truncate">Hey, is the Graphing Calculator still available?</p>
               <span class="badge" style="background-color: #115e3b; color: white;">Item: TI-84 Calculator</span>
             </a>
 
-<<<<<<< HEAD
-            <a href="#" class="list-group-item list-group-item-action p-3 border-bottom">
-=======
             <a href="#active-chat" class="list-group-item list-group-item-action p-3 border-bottom chat-item"
-               data-name="Brad Pitt" data-item="Lab Coat" data-initials="B" data-chat-id="brad">
->>>>>>> 83c76c6cc3ca0afb7565ae553216e66d5c5f8785
-              <div class="d-flex justify-content-between align-items-center"><h6 class="mb-1">Brad Pitt</h6><small class="text-muted">Yesterday</small></div>
+               data-name="Antonio Muyomba" data-item="Lab Coat" data-initials="A" data-chat-id="antonio">
+              <div class="d-flex justify-content-between align-items-center"><h6 class="mb-1">Antonio Muyomba</h6><small class="text-muted">Yesterday</small></div>
               <p class="mb-1 text-muted small text-truncate">Thanks for returning the lab coat on time!</p>
               <span class="badge bg-secondary text-white">Item: Lab Coat</span>
             </a>
 
-<<<<<<< HEAD
-            <a href="#" class="list-group-item list-group-item-action p-3 border-bottom">
-=======
             <a href="#active-chat" class="list-group-item list-group-item-action p-3 border-bottom chat-item"
-               data-name="Don Toliver" data-item="Canon EOS Rebel" data-initials="D" data-chat-id="don">
->>>>>>> 83c76c6cc3ca0afb7565ae553216e66d5c5f8785
-              <div class="d-flex justify-content-between align-items-center"><h6 class="mb-1">Don Toliver</h6><small class="text-muted">Oct 24</small></div>
+               data-name="Otim Ian" data-item="Canon EOS Rebel" data-initials="O" data-chat-id="otim">
+              <div class="d-flex justify-content-between align-items-center"><h6 class="mb-1">Otim Ian</h6><small class="text-muted">Oct 24</small></div>
               <p class="mb-1 text-muted small text-truncate">Can I borrow your DSLR camera this weekend?</p>
               <span class="badge bg-secondary text-white">Item: Canon EOS Rebel</span>
             </a>
 
             <a href="#active-chat" class="list-group-item list-group-item-action p-3 border-bottom chat-item"
-               data-name="Amina Sol" data-item="Laptop Stand" data-initials="A" data-chat-id="amina">
-              <div class="d-flex justify-content-between align-items-center"><h6 class="mb-1">Sabrinah</h6><small class="text-muted">Mon</small></div>
+               data-name="Ahabwe Benjamin" data-item="Laptop Stand" data-initials="A" data-chat-id="ahabwe">
+              <div class="d-flex justify-content-between align-items-center"><h6 class="mb-1">Ahabwe Benjamin</h6><small class="text-muted">Mon</small></div>
               <p class="mb-1 text-muted small text-truncate">I can pick up the laptop stand after class on Tuesday.</p>
               <span class="badge bg-secondary text-white">Item: Laptop Stand</span>
             </a>
 
             <a href="#active-chat" class="list-group-item list-group-item-action p-3 border-bottom chat-item"
-               data-name="Liam Brooks" data-item="Power Bank" data-initials="L" data-chat-id="liam">
-              <div class="d-flex justify-content-between align-items-center"><h6 class="mb-1">Ned Stark</h6><small class="text-muted">Sun</small></div>
+               data-name="Mwesigwa Jeremy" data-item="Power Bank" data-initials="M" data-chat-id="mwesigwa">
+              <div class="d-flex justify-content-between align-items-center"><h6 class="mb-1">Mwesigwa Jeremy</h6><small class="text-muted">Sun</small></div>
               <p class="mb-1 text-muted small text-truncate">Would it be okay to borrow the power bank for the trip?</p>
               <span class="badge bg-secondary text-white">Item: Power Bank</span>
             </a>
@@ -153,113 +145,67 @@
         </div>
 
         <!-- ACTIVE CHAT -->
-<<<<<<< HEAD
-        <div class="col-md-8 col-lg-9 p-0 d-flex flex-column" style="height: calc(100vh - 180px); min-height: 500px;">
-          <div class="p-3 border-bottom bg-white d-flex justify-content-between align-items-center">
-=======
         <div id="active-chat" class="col-md-8 col-lg-9 p-0 d-flex flex-column"
              style="height: calc(100vh - 180px); min-height: 500px;">
           <div class="p-3 border-bottom bg-white d-flex justify-content-between align-items-center" style="padding-top: 0.9rem !important; padding-bottom: 0.9rem !important;">
->>>>>>> eb938875679bc939807e2bcebb4ff85926860154
             <div class="d-flex align-items-center">
-<<<<<<< HEAD
-              <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3 fw-bold"
-                   style="width: 40px; height: 40px;">GJ</div>
-              <div>
-                <h5 class="mb-0 fs-6 fw-bold">Geno Joshua</h5>
-                <small class="text-muted">About: <a href="index.html#featured" class="text-decoration-none text-success">TI-84 Graphing Calculator</a></small>
-              </div>
-            </div>
-            <button class="btn btn-sm btn-outline-success"><i class="bi bi-check-circle me-1"></i>Mark as Borrowed</button>
-          </div>
-
-          <!-- CHAT MESSAGES STREAM -->
-          <div id="chatMessages" class="p-3 flex-grow-1 overflow-auto" style="background-color: #f8f9fa;">
-            <div class="d-flex mb-3">
-              <div class="bg-white p-3 rounded shadow-sm border" style="max-width: 75%;">
-                <p class="mb-1">Hi! I saw your listing for the TI-84 Graphing Calculator. Is it still available to borrow for the midterms tomorrow?</p>
-                <small class="text-muted float-end" style="font-size: 0.75rem;">10:30 AM</small>
-              </div>
-            </div>
-
-            <div class="d-flex justify-content-end mb-3">
-              <div class="text-white p-3 rounded shadow-sm" style="max-width: 75%; background-color: #115e3b;">
-                <p class="mb-1">Hey Sarah! Yes, it's available. Where on campus do you want to meet up to grab it?</p>
-                <small class="text-white-50 float-end" style="font-size: 0.75rem;">10:35 AM</small>
-              </div>
-            </div>
-
-            <div class="d-flex mb-3">
-              <div class="bg-white p-3 rounded shadow-sm border" style="max-width: 75%;">
-                <p class="mb-1">Awesome! Could we meet by the library entrance around 2:00 PM?</p>
-                <small class="text-muted float-end" style="font-size: 0.75rem;">10:42 AM</small>
-=======
               <div id="chat-avatar" class="bg-secondary text-white rounded-circle d-flex align-items-center justify-content-center me-3 fw-bold"
-                   style="width: 40px; height: 40px;">O</div>
+                   style="width: 40px; height: 40px;">G</div>
               <div>
-                <h5 id="chat-name" class="mb-0 fs-6 fw-bold">Okelo Christopher</h5>
-                <small class="text-muted">About: <a id="chat-item-link" href="index.html#featured" class="text-decoration-none">TI-84 Calculator</a></small>
->>>>>>> 83c76c6cc3ca0afb7565ae553216e66d5c5f8785
+                <h5 id="chat-name" class="mb-0 fs-6 fw-bold">Godi Donald</h5>
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
-          <!-- MESSAGE INPUT -->
-          <div class="p-3 bg-white border-top">
-            <form id="messageForm" class="input-group">
-              <button class="btn btn-outline-secondary" type="button" aria-label="Attach file"><i class="bi bi-paperclip"></i></button>
-              <input type="text" id="messageInput" class="form-control" placeholder="Type your message here..." autocomplete="off" required>
-              <button class="btn text-white px-4" type="submit" style="background-color: #115e3b; border-color: #115e3b;"><i class="bi bi-send me-1"></i> Send</button>
-=======
           <div id="chat-messages" class="p-3 flex-grow-1 overflow-auto" style="background-color: #cfdcc9;"></div>
 
           <div class="p-3 bg-white border-top">
             <form id="message-form" class="input-group" action="#" method="post">
               <input id="message-input" type="text" class="form-control" placeholder="Type your message here..." aria-label="Type your message" required>
               <button class="btn text-white" type="submit" style="background-color: #115e3b; border-color: #115e3b;"><i class="bi bi-send"></i> Send</button>
->>>>>>> 83c76c6cc3ca0afb7565ae553216e66d5c5f8785
             </form>
           </div>
         </div>
       </div>
     </main>
 
+    <!-- FOOTER PLACEHOLDER -->
     <div id="footer"></div>
 
+    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const chatData = {
-        okelo: {
-          name: "Okelo Christopher",
-          initials: "O",
+        godi: {
+          name: "Godi Donald",
+          initials: "G",
           item: "TI-84 Calculator",
           messages: [
             { sender: "them", text: "Hi! I saw your listing for the TI-84 Graphing Calculator. Is it still available to borrow for the midterms tomorrow?", time: "10:30 AM" },
-            { sender: "me", text: "Hey Christopher! Yes, it's available. Where on campus do you want to meet up to grab it?", time: "10:35 AM" },
+            { sender: "me", text: "Hey Donald! Yes, it's available. Where on campus do you want to meet up to grab it?", time: "10:35 AM" },
             { sender: "them", text: "Awesome! Could we meet by the library entrance around 2:00 PM?", time: "10:42 AM" }
           ]
         },
-        brad: {
-          name: "Brad Pitt",
-          initials: "B",
+        antonio: {
+          name: "Antonio Muyomba",
+          initials: "A",
           item: "Lab Coat",
           messages: [
             { sender: "them", text: "Thanks for returning the lab coat on time!", time: "Yesterday" },
             { sender: "me", text: "Absolutely, happy to help. Let me know if you need anything else.", time: "Yesterday" }
           ]
         },
-        don: {
-          name: "Don Toliver",
-          initials: "D",
+        otim: {
+          name: "Otim Ian",
+          initials: "O",
           item: "Canon EOS Rebel",
           messages: [
             { sender: "them", text: "Can I borrow your DSLR camera this weekend?", time: "Oct 24" },
             { sender: "me", text: "I can lend it to you on Saturday morning if that works for you.", time: "Oct 24" }
           ]
         },
-        amina: {
-          name: "Amina Sol",
+        ahabwe: {
+          name: "Ahabwe Benjamin",
           initials: "A",
           item: "Laptop Stand",
           messages: [
@@ -267,9 +213,9 @@
             { sender: "me", text: "Perfect. I'll keep it ready for you after 4:00 PM.", time: "Mon" }
           ]
         },
-        liam: {
-          name: "Liam Brooks",
-          initials: "L",
+        mwesigwa: {
+          name: "Mwesigwa Jeremy",
+          initials: "M",
           item: "Power Bank",
           messages: [
             { sender: "them", text: "Would it be okay to borrow the power bank for the trip?", time: "Sun" },
@@ -278,18 +224,16 @@
         }
       };
 
-      let activeChatId = "okelo";
+      let activeChatId = "godi";
 
       function renderMessages() {
         const chat = chatData[activeChatId];
         const container = document.getElementById("chat-messages");
         const avatar = document.getElementById("chat-avatar");
         const name = document.getElementById("chat-name");
-        const itemLink = document.getElementById("chat-item-link");
 
         avatar.textContent = chat.initials;
         name.textContent = chat.name;
-        itemLink.textContent = chat.item;
 
         container.innerHTML = chat.messages.map((message) => {
           const senderClass = message.sender === "me" ? "justify-content-end" : "";
@@ -329,46 +273,23 @@
         async function loadComponent(id, file) {
           try {
             let response = await fetch(file);
-            if (response.ok) document.getElementById(id).innerHTML = await response.text();
-          } catch (error) { console.error(`Error loading ${file}:`, error); }
+            if (response.ok) {
+              document.getElementById(id).innerHTML = await response.text();
+            }
+          } catch (error) {
+            console.error(`Error loading ${file}:`, error);
+          }
         }
-<<<<<<< HEAD
-        await loadComponent("navbar", "navbar.html");
-        await loadComponent("footer", "footer.html");
-
-        // Interactive Live Chat Functionality
-        const messageForm = document.getElementById('messageForm');
-        const messageInput = document.getElementById('messageInput');
-        const chatMessages = document.getElementById('chatMessages');
-
-        messageForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          const text = messageInput.value.trim();
-          if (!text) return;
-
-          const now = new Date();
-          const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
-          const messageBubble = document.createElement('div');
-          messageBubble.className = 'd-flex justify-content-end mb-3';
-          messageBubble.innerHTML = `
-            <div class="text-white p-3 rounded shadow-sm" style="max-width: 75%; background-color: #115e3b;">
-              <p class="mb-1">${escapeHtml(text)}</p>
-              <small class="text-white-50 float-end" style="font-size: 0.75rem;">${timeString}</small>
-            </div>
-          `;
-          chatMessages.appendChild(messageBubble);
-          messageInput.value = '';
-          chatMessages.scrollTop = chatMessages.scrollHeight;
-        });
-
-        function escapeHtml(string) {
-          return string.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        }
-      });
-=======
 
         await loadComponent("navbar", "navbar.html");
+        const loginProfileName = sessionStorage.getItem("borrowboxLoginName");
+        const profileNameElement = document.querySelector("#navbar [data-profile-name]");
+        if (loginProfileName && profileNameElement) {
+          profileNameElement.textContent = loginProfileName;
+          const profileInitialElement = document.querySelector("#navbar [data-profile-initial]");
+          if (profileInitialElement) profileInitialElement.textContent = loginProfileName.trim().charAt(0).toUpperCase();
+        }
+        document.querySelector('#navbar a[href="login.html"]')?.addEventListener("click", () => sessionStorage.removeItem("borrowboxLoginName"));
         await loadComponent("footer", "footer.html");
 
         const searchInput = document.querySelector(".form-control.form-control-sm");
@@ -404,7 +325,12 @@
           renderMessages();
         });
 
-        renderMessages();
+        const requestedChatId = new URLSearchParams(window.location.search).get("chat");
+        if (requestedChatId && chatData[requestedChatId]) {
+          setActiveChat(requestedChatId);
+        } else {
+          renderMessages();
+        }
       });
 
       const currentPath = window.location.pathname.split("/").pop() || "index.html";
@@ -415,7 +341,6 @@
           link.setAttribute("aria-current", "page");
         }
       });
->>>>>>> 83c76c6cc3ca0afb7565ae553216e66d5c5f8785
     </script>
 </body>
 </html>

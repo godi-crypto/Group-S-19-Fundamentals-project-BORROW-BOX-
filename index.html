@@ -35,100 +35,79 @@
     .nav-item-hover.active-tab::after {
       transform: scaleX(1);
     }
+
+    
+    body { background-color: #f8faf9; }
+    .navbar { position: sticky; top: 0; z-index: 1030; }
+    .navbar-brand, .nav-link, .dropdown-menu { transition: all .2s ease; }
+    .nav-item-hover { letter-spacing: .01em; }
+    main #search {
+      background-color: #0b3c29 !important;
+      background-image: radial-gradient(circle at 88% 18%, rgba(255,255,255,.10), transparent 24%),
+                        linear-gradient(120deg, #0b3c29 0%, #115e3b 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    main #search .container-fluid { position: relative; z-index: 1; }
+    main #search h1 { letter-spacing: -.035em; line-height: 1.12; }
+    main #search .lead { max-width: 650px; line-height: 1.7; }
+    main #search form { max-width: 680px; border: 1px solid rgba(255,255,255,.55); }
+    main #search form .form-control { min-height: 48px; }
+    main #search form .btn { min-height: 48px; font-weight: 600; }
+    .section-heading { letter-spacing: -.02em; }
+    .category-card {
+      border-radius: 14px;
+      min-height: 104px;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .category-card .card-body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; }
+    .category-card i { font-size: 1.55rem; }
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0  .75rem 1.5rem rgba(20, 50, 35, .12) !important;
+    }
+    #featured .card {
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    #featured .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 1rem 2rem rgba(20, 50, 35, .13) !important;
+      border-color: rgba(25,135,84,.45) !important;
+    }
+    .item-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .35s ease;
+    }
+    #featured .card:hover .item-image { transform: scale(1.045); }
+    .item-image-wrap { overflow: hidden; position: relative; }
+    .item-image-wrap .badge { z-index: 2; }
+    #featured .card-body { padding: 1.15rem; }
+    #featured .card-body h3 { min-height: 2.5rem; line-height: 1.35; }
+    #featured .btn { border-radius: 9px; font-weight: 600; padding: .65rem 1rem; }
+    #featured .btn:hover { box-shadow: 0 .35rem .8rem rgba(25,135,84,.2); }
+    .seller-avatar {
+      width: 34px; height: 34px; flex: 0 0 34px;
+      display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 50%; color: #fff; background: #0b3c29; font-weight: 700;
+    }
+    @media (max-width: 575.98px) {
+      main #search { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+      main #search h1 { font-size: 2.15rem; }
+      .category-card { min-height: 94px; }
+      #featured .card-body { padding: 1rem; }
+    }
+
   </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
-      <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
-        <a class="navbar-brand d-flex align-items-center text-decoration-none m-0" href="index.html">
-          <div class="rounded-4 p-2 me-3 d-flex align-items-center justify-content-center text-white"
-               style="width: 48px; height: 48px; background-color: #0b3c29">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-              <line x1="12" y1="22.08" x2="12" y2="12"/>
-            </svg>
-          </div>
-          <div class="brand-text d-flex flex-column">
-            <span class="fw-bold fs-4 lh-1 mb-1" style="color: #0b3c29; letter-spacing: -0.5px;">BorrowBox</span>
-            <span class="text-muted" style="font-size: 0.78rem;">What You Need, When You Need It.</span>
-          </div>
-        </a>
+    <div id="navbar"></div>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-center flex-grow-1" id="navbarSupportedContent">
-          <ul class="navbar-nav flex-row flex-wrap gap-4 gap-lg-5 align-items-center m-0">
-            
-            <li class="nav-item position-relative">
-              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2 active-tab" href="index.html" aria-current='page'>
-                <i class="bi bi-house-door"></i>
-                HOME
-              </a>
-            </li>
-            <li class="nav-item position-relative">
-              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="index.html#search" >
-                <i class="bi bi-search"></i>
-                Browse Items
-              </a>
-            </li>
-            <li class="nav-item position-relative">
-              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="borrowings.html" >
-                <i class="bi bi-calendar-check"></i>
-                My Borrowings
-              </a>
-            </li>
-            <li class="nav-item position-relative">
-              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="messages.html" >
-                <i class="bi bi-envelope"></i>
-                Messages
-              </a>
-            </li>
-            <li class="nav-item position-relative">
-              <a class="nav-link nav-item-hover d-flex align-items-center gap-2 p-0 py-2" href="my lendings.html" >
-                <i class="bi bi-stopwatch"></i>
-                My Lendings
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="d-flex align-items-center gap-4">
-          <button class="btn p-0 text-secondary position-relative border-0 bg-transparent"
-                  type="button" aria-label="Notifications">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
-            </svg>
-          </button>
-
-          <div class="dropdown">
-            <a href="#" class="d-flex align-items-center gap-2 text-decoration-none dropdown-toggle"
-               data-bs-toggle="dropdown" aria-expanded="false">
-              <div class="rounded-circle text-white d-flex align-items-center justify-content-center fw-bold overflow-hidden"
-                   style="width: 42px; height: 42px; background-color: #072213;">G</div>
-              <div class="d-flex flex-column lh-sm">
-                <span class="fw-bold text-dark" style="font-size: 0.95rem;">GODI</span>
-                <span class="text-muted" style="font-size: 0.75rem;">Student</span>
-              </div>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end shadow border-0 rounded-3 mt-2">
-              <li><a class="dropdown-item py-2 fw-semibold" href="borrowings.html">BORROWING</a></li>
-              <li><a class="dropdown-item py-2 fw-semibold" href="my lendings.html">LENDING</a></li>
-              <li><a class="dropdown-item py-2 fw-semibold" href="index.html">SIGN OUT</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- END NAVBAR -->
-    
     
      <main>
       <!-- HOMEPAGE By Ahabwe Benjamin -->
@@ -137,6 +116,8 @@
         <div class="container-fluid px-lg-5">
           <div class="row">
             <div class="col-lg-7">
+              <div class="d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2 mb-3">
+              </div>
               <h1 class="display-5 fw-bold mb-3">
                 Need it for a while?<br>
                 Borrow it instead.
@@ -145,7 +126,7 @@
                 BorrowBox connects students to share, borrow and lend useful items across campus.
                 Save money, reduce waste, and make the most of what you need.
               </p>
-              <form class="bg-white rounded-3 p-2 d-flex gap-2 shadow" role="search"
+              <form id="itemSearchForm" class="bg-white rounded-3 p-2 d-flex gap-2 shadow" role="search"
                     action="index.html#featured" method="get">
                 <label for="searchInput" class="visually-hidden">Search for items</label>
                 <input id="searchInput" name="q" type="search"
@@ -162,132 +143,254 @@
         <!-- CATEGORIES -->
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h2 class="h4 fw-bold mb-0">Browse by Category</h2>
-          <a href="index.html#search" class="link-success fw-semibold text-decoration-none small">View all categories &rarr;</a>
         </div>
 
-        <div class="row row-cols-2 row-cols-md-4 g-3 mb-5">
-          <div class="col"><a href="index.html#featured" class="card h-100 border-0 bg-primary-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold">Textbooks</div></a></div>
-          <div class="col"><a href="index.html#featured" class="card h-100 border-0 bg-success-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold">Calculators</div></a></div>
-          <div class="col"><a href="index.html#featured" class="card h-100 border-0 bg-secondary-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold">Electronics</div></a></div>
-          <div class="col"><a href="index.html#featured" class="card h-100 border-0 bg-warning-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold">Projectors</div></a></div>
-          <div class="col"><a href="index.html#featured" class="card h-100 border-0 bg-danger-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold">Tools</div></a></div>
-          <div class="col"><a href="index.html#featured" class="card h-100 border-0 bg-info-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold">Sports</div></a></div>
-          <div class="col"><a href="index.html#featured" class="card h-100 border-0 bg-success-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold">Lab Equipment</div></a></div>
-          <div class="col"><a href="index.html#featured" class="card h-100 border-0 bg-light text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold">Others</div></a></div>
+        <div id="categories" class="row row-cols-2 row-cols-md-4 g-3 mb-5">
+          <div class="col"><a href="index.html#featured" data-category-filter="textbooks" class="card h-100 border-0 category-card bg-primary-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold"><i class="bi bi-book-half" aria-hidden="true"></i><span>Textbooks</span></div></a></div>
+          <div class="col"><a href="index.html#featured" data-category-filter="calculators" class="card h-100 border-0 category-card bg-success-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold"><i class="bi bi-calculator" aria-hidden="true"></i><span>Calculators</span></div></a></div>
+          <div class="col"><a href="index.html#featured" data-category-filter="electronics" class="card h-100 border-0 category-card bg-secondary-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold"><i class="bi bi-laptop" aria-hidden="true"></i><span>Electronics</span></div></a></div>
+          <div class="col"><a href="index.html#featured" data-category-filter="projectors" class="card h-100 border-0 category-card bg-warning-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold"><i class="bi bi-projector" aria-hidden="true"></i><span>Projectors</span></div></a></div>
+          <div class="col"><a href="index.html#featured" data-category-filter="tools" class="card h-100 border-0 category-card bg-danger-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold"><i class="bi bi-tools" aria-hidden="true"></i><span>Tools</span></div></a></div>
+          <div class="col"><a href="index.html#featured" data-category-filter="sports" class="card h-100 border-0 category-card bg-info-subtle text-decoration-none text-body shadow-sm"><div class="card-body text-center py-4 fw-semibold"><i class="bi bi-dribbble" aria-hidden="true"></i><span>Sports</span></div></a></div>
+          <div class="col"><a href="index.html#featured" class="card h-100 border-0 category-card bg-success-subtle text-decoration-none text-body shadow-sm" data-category-filter="lab-equipment"><div class="card-body text-center py-4 fw-semibold"><i class="bi bi-flask" aria-hidden="true"></i><span>Lab Equipment</span></div></a></div>
+          <div class="col"><a href="index.html#featured" class="card h-100 border-0 category-card bg-light text-decoration-none text-body shadow-sm" data-category-filter="others"><div class="card-body text-center py-4 fw-semibold"><i class="bi bi-grid" aria-hidden="true"></i><span>Others</span></div></a></div>
         </div>
 
         <!-- FEATURED ITEMS -->
         <div id="featured" class="d-flex justify-content-between align-items-center mb-3">
           <h2 class="h4 fw-bold mb-0">Featured Items</h2>
-          <a href="index.html#search" class="link-success fw-semibold text-decoration-none small">Back to search &uarr;</a>
+          <span id="filterStatus" class="small text-secondary ms-3" aria-live="polite"></span>
         </div>
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-3 mb-4">
           <!-- ITEM 1 -->
-          <div class="col"><div class="card h-100 border shadow-sm">
-            <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small">
-              <img src="Calculator2.jpg" class="card-img-top" alt="Casio Calculator" style="height: 320px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
+          <div class="col featured-item" data-category="calculators"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small">
+              <img src="borrowbox_images/calculator-fx991.jpg" class="card-img-top item-image" alt="Casio FX-991ES Plus calculator" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
               </div></div>
             <div class="card-body d-flex flex-column">
               <h3 class="h6 fw-bold mb-1">Casio FX-991ES Plus</h3><div class="small text-secondary mb-3">Calculators</div>
-              <div class="d-flex align-items-center gap-2 mb-3"><span class="badge rounded-pill bg-dark">S</span><div class="small"><div class="fw-semibold">Ahabwe Benjamin.</div><div class="text-secondary">&#9733; 4.8 (12 reviews)</div></div></div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">S</span><div class="small"><div class="fw-semibold">Ahabwe Benjamin.</div><div class="text-secondary">&#9733; 4 (12 reviews)</div></div></div>
               <div class="small text-secondary">Main Campus</div><div class="small text-secondary mb-3">Maximum Days: 3 Days</div>
-              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">Free</div><a href="messages.html" class="btn btn-success w-100">Request to Borrow</a></div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">Free</div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
             </div></div></div>
 
           <!-- ITEM 2 -->
-          <div class="col"><div class="card h-100 border shadow-sm">
-            <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="hp laptop.jpg" class="card-img-top" alt="hp laptop" style="height: 320px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
-            <div class="card-body d-flex flex-column">
-            </div>
+          <div class="col featured-item" data-category="electronics"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="borrowbox_images/hp-laptop.jpg" class="card-img-top item-image" alt="HP laptop" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
             <div class="card-body d-flex flex-column">
               <h3 class="h6 fw-bold mb-1">HP Laptop (i5, 8GB RAM)</h3><div class="small text-secondary mb-3">Laptops</div>
-              <div class="d-flex align-items-center gap-2 mb-3"><span class="badge rounded-pill bg-dark">D</span><div class="small"><div class="fw-semibold">Antonio Muyomba.</div><div class="text-secondary">&#9733; 4.9 (18 reviews)</div></div></div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">D</span><div class="small"><div class="fw-semibold">Antonio Muyomba.</div><div class="text-secondary">&#9733; 4 (18 reviews)</div></div></div>
               <div class="small text-secondary">Engineering Block</div><div class="small text-secondary mb-3">Maximum Days: 7 Days</div>
-              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">UGX 10,000 <span class="small fw-normal">(deposit)</span></div><a href="messages.html" class="btn btn-success w-100">Request to Borrow</a></div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">UGX 10,000 <span class="small fw-normal">(deposit)</span></div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
             </div></div></div>
 
           <!-- ITEM 3 -->
-          <div class="col"><div class="card h-100 border shadow-sm">
-            <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="projector.jpg" class="card-img-top" alt="Epson projector" style="height: 320px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
+          <div class="col featured-item" data-category="projectors"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="borrowbox_images/epson-projector.jpg" class="card-img-top item-image" alt="Epson projector" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
             <div class="card-body d-flex flex-column">
               <h3 class="h6 fw-bold mb-1">Epson Projector</h3><div class="small text-secondary mb-3">Projectors</div>
-              <div class="d-flex align-items-center gap-2 mb-3"><span class="badge rounded-pill bg-dark">G</span><div class="small"><div class="fw-semibold">Donald Godi.</div><div class="text-secondary">&#9733; 4.7 (9 reviews)</div></div></div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">G</span><div class="small"><div class="fw-semibold">Donald Godi.</div><div class="text-secondary">&#9733; 4 (9 reviews)</div></div></div>
               <div class="small text-secondary">Library</div><div class="small text-secondary mb-3">Maximum Days: 5 Days</div>
-              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">Free</div><a href="messages.html" class="btn btn-success w-100">Request to Borrow</a></div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">Free</div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
             </div></div></div>
 
           <!-- ITEM 4 -->
-          <div class="col"><div class="card h-100 border shadow-sm">
-            <div class="ratio ratio-4x3 bg-secondary-subtle"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="textbook.jpg" class="card-img-top" alt="Computer science textbook" style="height: 320px; object-fit: cover;"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
+          <div class="col featured-item" data-category="textbooks"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small"><img src="borrowbox_images/computer-science-textbook.jpg" class="card-img-top item-image" alt="Computer science textbook" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span></div></div>
             <div class="card-body d-flex flex-column">
               <h3 class="h6 fw-bold mb-1">Computer Science Textbook</h3><div class="small text-secondary mb-3">Textbooks</div>
-              <div class="d-flex align-items-center gap-2 mb-3"><span class="badge rounded-pill bg-dark">J</span><div class="small"><div class="fw-semibold">Mwesigwa Jeremiah.</div><div class="text-secondary">&#9733; 4.6 (11 reviews)</div></div></div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">J</span><div class="small"><div class="fw-semibold">Mwesigwa Jeremiah.</div><div class="text-secondary">&#9733; 4 (11 reviews)</div></div></div>
               <div class="small text-secondary">Science Block</div><div class="small text-secondary mb-3">Maximum Days: 7 Days</div>
-              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">UGX 5,000 <span class="small fw-normal">(deposit)</span></div><a href="messages.html" class="btn btn-success w-100">Request to Borrow</a></div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">UGX 5,000 <span class="small fw-normal">(deposit)</span></div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
             </div></div></div>
+
+          <!-- ADDITIONAL FEATURED ITEMS -->
+          <!-- These are sample listings; replace the names, owners, prices and image files with real listings. -->
+
+          <!-- ITEM 5 -->
+          <div class="col featured-item" data-category="calculators"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small">
+              <img src="borrowbox_images/calculator-fx82.jpg" class="card-img-top item-image" alt="Scientific calculator" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
+            </div></div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6 fw-bold mb-1">Casio FX-82MS Calculator</h3><div class="small text-secondary mb-3">Calculators</div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">M</span><div class="small"><div class="fw-semibold">Michael K.</div><div class="text-secondary">&#9733; 4 (8 reviews)</div></div></div>
+              <div class="small text-secondary">Main Campus</div><div class="small text-secondary mb-3">Maximum Days: 4 Days</div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">Free</div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
+            </div></div></div>
+
+          <!-- ITEM 6 -->
+          <div class="col featured-item" data-category="textbooks"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small">
+              <img src="borrowbox_images/advanced-mathematics-textbook.jpg" class="card-img-top item-image" alt="Mathematics textbook" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
+            </div></div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6 fw-bold mb-1">Advanced Mathematics Textbook</h3><div class="small text-secondary mb-3">Textbooks</div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">A</span><div class="small"><div class="fw-semibold">Agnes N.</div><div class="text-secondary">&#9733; 4 (6 reviews)</div></div></div>
+              <div class="small text-secondary">Science Block</div><div class="small text-secondary mb-3">Maximum Days: 7 Days</div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">UGX 3,000 <span class="small fw-normal">(deposit)</span></div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
+            </div></div></div>
+
+          <!-- ITEM 7 -->
+          <div class="col featured-item" data-category="sports"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small">
+              <img src="borrowbox_images/football.jpg" class="card-img-top item-image" alt="Football" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
+            </div></div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6 fw-bold mb-1">Training Football</h3><div class="small text-secondary mb-3">Sports</div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">P</span><div class="small"><div class="fw-semibold">Peter O.</div><div class="text-secondary">&#9733; 4 (5 reviews)</div></div></div>
+              <div class="small text-secondary">Sports Grounds</div><div class="small text-secondary mb-3">Maximum Days: 2 Days</div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">Free</div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
+            </div></div></div>
+
+          <!-- ITEM 8 -->
+          <div class="col featured-item" data-category="tools"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small">
+              <img src="borrowbox_images/tool-kit.jpg" class="card-img-top item-image" alt="Hand tool kit" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
+            </div></div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6 fw-bold mb-1">Basic Hand Tool Kit</h3><div class="small text-secondary mb-3">Tools</div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">R</span><div class="small"><div class="fw-semibold">Robert T.</div><div class="text-secondary">&#9733; 4 (7 reviews)</div></div></div>
+              <div class="small text-secondary">Engineering Block</div><div class="small text-secondary mb-3">Maximum Days: 3 Days</div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">UGX 2,000 <span class="small fw-normal">(deposit)</span></div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
+            </div></div></div>
+
+          <!-- ITEM 9 -->
+          <div class="col featured-item" data-category="lab-equipment"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small">
+              <img src="borrowbox_images/microscope.jpg" class="card-img-top item-image" alt="Laboratory microscope" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
+            </div></div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6 fw-bold mb-1">Student Laboratory Microscope</h3><div class="small text-secondary mb-3">Lab Equipment</div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">L</span><div class="small"><div class="fw-semibold">Lydia S.</div><div class="text-secondary">&#9733; 4 (4 reviews)</div></div></div>
+              <div class="small text-secondary">Science Block</div><div class="small text-secondary mb-3">Maximum Days: 2 Days</div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">UGX 5,000 <span class="small fw-normal">(deposit)</span></div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
+            </div></div></div>
+
+          <!-- ITEM 10 -->
+          <div class="col featured-item" data-category="others"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small">
+              <img src="borrowbox_images/student-backpack.jpg" class="card-img-top item-image" alt="Student backpack" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
+            </div></div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6 fw-bold mb-1">Student Backpack</h3><div class="small text-secondary mb-3">Others</div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">N</span><div class="small"><div class="fw-semibold">Nathan B.</div><div class="text-secondary">&#9733; 4 (3 reviews)</div></div></div>
+              <div class="small text-secondary">Main Campus</div><div class="small text-secondary mb-3">Maximum Days: 5 Days</div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">Free</div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
+            </div></div></div>
+
+          <!-- ITEM 11 -->
+          <div class="col featured-item" data-category="electronics"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small">
+              <img src="borrowbox_images/wireless-mouse.jpg" class="card-img-top item-image" alt="Wireless computer mouse" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
+            </div></div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6 fw-bold mb-1">Wireless Computer Mouse</h3><div class="small text-secondary mb-3">Electronics</div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">E</span><div class="small"><div class="fw-semibold">Esther W.</div><div class="text-secondary">&#9733; 4 (5 reviews)</div></div></div>
+              <div class="small text-secondary">ICT Block</div><div class="small text-secondary mb-3">Maximum Days: 5 Days</div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">Free</div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
+            </div></div></div>
+
+          <!-- ITEM 12 -->
+          <div class="col featured-item" data-category="projectors"><div class="card h-100 border shadow-sm">
+            <div class="ratio ratio-4x3 bg-secondary-subtle item-image-wrap"><div class="d-flex align-items-center justify-content-center text-secondary small">
+              <img src="borrowbox_images/mini-projector.jpg" class="card-img-top item-image" alt="Portable projector" loading="lazy"><span class="badge bg-success position-absolute top-0 start-0 m-2">Available</span>
+            </div></div>
+            <div class="card-body d-flex flex-column">
+              <h3 class="h6 fw-bold mb-1">Portable Mini Projector</h3><div class="small text-secondary mb-3">Projectors</div>
+              <div class="d-flex align-items-center gap-2 mb-3"><span class="seller-avatar">B</span><div class="small"><div class="fw-semibold">Brian M.</div><div class="text-secondary">&#9733; 4 (6 reviews)</div></div></div>
+              <div class="small text-secondary">Library</div><div class="small text-secondary mb-3">Maximum Days: 3 Days</div>
+              <div class="mt-auto"><div class="fw-bold text-success-emphasis mb-2">UGX 5,000 <span class="small fw-normal">(deposit)</span></div><a href="request%20to%20borrow.html" class="btn btn-success w-100">Request to Borrow</a></div>
+            </div></div></div>
+
         </div>
       </div>
     </main>
     <!--END OF HOMEPAGE-->
-    
-
-    <!-- BORROWBOX FOOTER -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> eb938875679bc939807e2bcebb4ff85926860154
- <div id="footer"></div>
-    <!-- END FOOTER -->
-    <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", async () => {
-      async function loadComponent(id, file) {
-        try {
-          let response = await fetch(file);
-          if (response.ok) {
-            document.getElementById(id).innerHTML = await response.text();
-          }
-        } catch (error) {
-          console.error(`Error loading ${file}:`, error);
-        }
-      }
-
-      // Automatically inject navbar.html and footer.html into their placeholder divs
-      await loadComponent("navbar", "navbar.html");
-      await loadComponent("footer", "footer.html");
-    });
-  </script>
-<<<<<<< HEAD
-=======
->>>>>>> 83c76c6cc3ca0afb7565ae553216e66d5c5f8785
     <div id="footer"></div>
-    <!-- END FOOTER -->
-     
-     <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        async function loadComponent(id, file) {
-          try {
-            let response = await fetch(file);
-            if (response.ok) {
-              document.getElementById(id).innerHTML = await response.text();
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("navbar.html")
+          .then((response) => response.ok ? response.text() : "")
+          .then((navbar) => {
+            document.getElementById("navbar").innerHTML = navbar;
+            const loginProfileName = sessionStorage.getItem("borrowboxLoginName");
+            const profileNameElement = document.querySelector("#navbar [data-profile-name]");
+            if (loginProfileName && profileNameElement) {
+              profileNameElement.textContent = loginProfileName;
+              const profileInitialElement = document.querySelector("#navbar [data-profile-initial]");
+              if (profileInitialElement) profileInitialElement.textContent = loginProfileName.trim().charAt(0).toUpperCase();
             }
-          } catch (error) {
-            console.error(`Error loading ${file}:`, error);
-          }
-        }
+            document.querySelector('#navbar a[href="login.html"]')?.addEventListener("click", () => sessionStorage.removeItem("borrowboxLoginName"));
+          })
+          .catch((error) => console.error("Error loading navbar.html:", error));
 
-        await loadComponent("navbar", "navbar.html");
-        await loadComponent("footer", "footer.html");
+        fetch("footer.html")
+          .then((response) => response.ok ? response.text() : "")
+          .then((footer) => {
+            document.getElementById("footer").innerHTML = footer;
+          })
+          .catch((error) => console.error("Error loading footer.html:", error));
+
+        const categoryLinks = document.querySelectorAll("[data-category-filter]");
+        const featuredItems = document.querySelectorAll(".featured-item");
+        const filterStatus = document.getElementById("filterStatus");
+        const searchForm = document.getElementById("itemSearchForm");
+        const searchInput = document.getElementById("searchInput");
+        let activeCategory = null;
+        let searchQuery = new URLSearchParams(window.location.search).get("q")?.trim().toLowerCase() || "";
+
+        searchInput.value = searchQuery;
+
+        const applyFilters = () => {
+          let visibleItemCount = 0;
+
+          featuredItems.forEach((item) => {
+            const matchesCategory = activeCategory === null || item.dataset.category === activeCategory;
+            const matchesQuery = item.textContent.toLowerCase().includes(searchQuery);
+            const isVisible = matchesCategory && matchesQuery;
+
+            item.classList.toggle("d-none", !isVisible);
+            if (isVisible) visibleItemCount += 1;
+          });
+
+          const activeCategoryLink = Array.from(categoryLinks)
+            .find((link) => link.dataset.categoryFilter === activeCategory);
+          const statusParts = [];
+          if (activeCategoryLink) statusParts.push(`${activeCategoryLink.textContent.trim()} items`);
+          if (searchQuery) statusParts.push(`Search: "${searchInput.value.trim()}"`);
+
+          filterStatus.textContent = visibleItemCount === 0
+            ? "No available items found."
+            : statusParts.join(" · ");
+        };
+
+        searchForm.addEventListener("submit", (event) => {
+          event.preventDefault();
+          searchQuery = searchInput.value.trim().toLowerCase();
+          applyFilters();
+          document.getElementById("featured").scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+
+        searchInput.addEventListener("input", () => {
+          searchQuery = searchInput.value.trim().toLowerCase();
+          applyFilters();
+        });
+
+        categoryLinks.forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const selectedCategory = link.dataset.categoryFilter;
+            activeCategory = activeCategory === selectedCategory ? null : selectedCategory;
+            applyFilters();
+            document.getElementById("featured").scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        });
+
+        if (searchQuery) applyFilters();
       });
     </script>
->>>>>>> 13b8ceaf49b772eb15b8e1571ad8f26e2fcdc1ba
-=======
->>>>>>> eb938875679bc939807e2bcebb4ff85926860154
   </body>
 </html>
